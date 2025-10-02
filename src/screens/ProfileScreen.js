@@ -6,9 +6,9 @@ import Message from "./Message";
 
 function ProfileScreen() {
   const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName]   = useState("");
-  const [password, setPassword]   = useState("");
-  const [phone, setPhone]         = useState("");
+  const [lastName, setLastName] = useState("");
+  const [password, setPassword] = useState("");
+  const [phone, setPhone] = useState("");
   const [birthdate, setBirthDate] = useState("");
 
   const dispatch = useDispatch();
@@ -19,12 +19,10 @@ function ProfileScreen() {
   const userUpdateProfile = useSelector((state) => state.userUpdateProfile);
   const { success } = userUpdateProfile;
 
-  
   useEffect(() => {
     dispatch(getUserProfile());
   }, [dispatch]);
 
- 
   useEffect(() => {
     if (user) {
       setFirstName(user.first_name || "");
@@ -40,9 +38,9 @@ function ProfileScreen() {
       updateUserProfile({
         first_name: firstName,
         last_name: lastName,
-        password: password || undefined, 
+        password: password || undefined,
         phone,
-        birthdate, 
+        birthdate,
       })
     );
   };
@@ -56,7 +54,9 @@ function ProfileScreen() {
         <Message variant="danger">{error}</Message>
       ) : (
         <form onSubmit={submitHandler}>
-          {success && <p style={{ color: "green" }}>Profile Updated Successfully</p>}
+          {success && (
+            <p style={{ color: "green" }}>Profile Updated Successfully</p>
+          )}
 
           <div className="mb-3">
             <label className="form-label">First Name</label>
@@ -98,18 +98,13 @@ function ProfileScreen() {
             />
           </div>
 
-          <div className="mb-3">
-            <label className="form-label">New Password</label>
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Leave empty to keep current password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-
-          <button type="submit" className="btn btn-primary">Update</button>
+          <button
+            type="submit"
+            className="btn btn-primary"
+            style={{ color: "#fff", backgroundColor: "#184F38" }}
+          >
+            Update
+          </button>
         </form>
       )}
     </div>

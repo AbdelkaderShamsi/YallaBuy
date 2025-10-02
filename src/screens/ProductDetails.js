@@ -41,13 +41,6 @@ function ProductDetails({ params }) {
         <Image
           src={product.image}
           alt={product.name}
-          style={{
-            maxWidth: "100%",
-            maxHeight: "400px",
-            objectFit: "contain",
-            transition: "transform 0.3s ease",
-            cursor: "pointer",
-          }}
           className="product-image-byone"
           fluid
         />

@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       <Header />
-      <CategoryNav />
+      
       <div style={{ minHeight: "90vh" }}>
         <Routes>
           <Route path="/home" element={<HomeScreen />} />

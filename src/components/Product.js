@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addToWishlist } from "../actions/wishlistActions";
+import "../index.css";
 
 function Product({ product }) {
   const dispatch = useDispatch();
@@ -16,24 +17,8 @@ function Product({ product }) {
   };
 
   return (
-    <Card
-      className="my-3 p-3 rounded shadow-sm product-card"
-      style={{ position: "relative" }}
-    >
-      <div
-        onClick={toggleWishlist}
-        style={{
-          position: "absolute",
-          top: "10px",
-          left: "10px",
-          background: "rgba(255, 255, 255, 0.95)",
-          borderRadius: "50%",
-          padding: "8px",
-          cursor: "pointer",
-          boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
-          zIndex: 10,
-        }}
-      >
+    <Card className="my-3 p-3 rounded shadow-sm product-card">
+      <div onClick={toggleWishlist}>
         <FaHeart size={18} color={active ? "#e63946" : "#aaa"} />
       </div>
 

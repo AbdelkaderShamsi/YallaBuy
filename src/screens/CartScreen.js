@@ -54,16 +54,7 @@ function CartScreen() {
   };
   return (
     <Container className="py-4">
-      <div
-        className="mx-auto mb-4 text-center d-flex align-items-center justify-content-center"
-        style={{
-          height: "50px",
-          width: "300px",
-          backgroundColor: "#184F38",
-          borderRadius: "10px",
-          color: "white",
-        }}
-      >
+      <div className="mx-auto mb-4 text-center d-flex align-items-center justify-content-center cart-container">
         <h1 className="m-0">Cart Items</h1>
       </div>
 
@@ -74,18 +65,11 @@ function CartScreen() {
           ) : error ? (
             <Message variant="danger">{error}</Message>
           ) : cartItems.length === 0 ? (
-            <div className="d-flex flex-column align-items-center justify-content-center my-5">
+            <div className="d-flex flex-column align-items-center justify-content-center my-5 ">
               <img
                 src="/media/cart.jpg"
                 alt="Empty Cart"
-                style={{
-                  width: "400px",
-                  height: "auto",
-                  opacity: 0.85,
-                  marginBottom: "-40px",
-                  marginTop: "-130px",
-                  marginLeft: "85px",
-                }}
+                className="cart-image"
               />
               <h4 className="text-muted mb-3" style={{ marginLeft: "80px" }}>
                 Nothing in the Cart

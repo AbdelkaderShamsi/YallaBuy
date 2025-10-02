@@ -36,12 +36,11 @@ function SearchBox() {
           }}
         />
         <InputGroup.Text
-          style={{
-            backgroundColor: "#fff",
-            borderLeft: "none",
-            cursor: "pointer",
-          }}
-          className="search-icon"
+          // style={{
+          //   backgroundColor: "#fff",
+          //   borderLeft: "none",
+          //   cursor: "pointer",
+          // }}
         >
           <FaSearch />
         </InputGroup.Text>

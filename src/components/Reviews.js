@@ -144,8 +144,7 @@ function Reviews() {
     <div id="reviews">
       <Container>
         <div className="reviews-container">
-          <h1>Reviews</h1>
-          <p className="text-muted">How we made a difference</p>
+          <h1>How we made a difference</h1>
         </div>
 
         {submitStatus.message && (
@@ -188,12 +187,7 @@ function Reviews() {
               placeholder="Add your Review ..."
               value={text}
               onChange={(e) => setText(e.target.value)}
-              style={{
-                backgroundColor: "#e8c999",
-                border: "1px solid #ccc",
-                color: "#000",
-                fontSize: "16px",
-              }}
+              className="text-review"
               maxLength={500}
             />
             <Form.Text className="text-muted d-block mt-2 text-center">
@@ -201,18 +195,8 @@ function Reviews() {
               {!userInfo && " - Your review will be posted as 'Guest User'"}
             </Form.Text>
           </Form.Group>
-          <div className="d-flex justify-content-center">
-            <Button
-              type="submit"
-              className="px-4 py-2"
-              style={{
-                backgroundColor: "#e8c999",
-                borderColor: "#e8c999",
-                color: "#000000",
-                fontSize: "18px",
-                fontWeight: "600",
-              }}
-            >
+          <div className="d-flex justify-content-center ">
+            <Button type="submit" className="px-4 py-2 button-review">
               Send Review
             </Button>
           </div>

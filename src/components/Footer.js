@@ -32,59 +32,19 @@ function Footer() {
               <img
                 src="/media/basket1.jpg"
                 alt="logo"
-                style={{
-                  height: "150px",
-                  width: "150px",
-                  objectFit: "contain",
-                }}
+                className="footer-logo"
               />
-              <h3
-                style={{
-                  fontWeight: "700",
-                  fontSize: "42px",
-                }}
-              >
-                <i
-                  className="fi fi-tr-phone-call"
-                  style={{ fontSize: "25px", marginRight: "10px" }}
-                ></i>
+              <h3>
+                <i className="fi fi-tr-phone-call"></i>
                 45987
               </h3>
-              <p
-                style={{
-                  fontWeight: "100",
-                  fontSize: "16px",
-                  color: "#d3d3d360",
-                }}
-              >
-                Building C15 | Abu Rawash | Cairo-Alex Rd | Giza | Egypt
-              </p>
-              <h6
-                style={{
-                  fontWeight: "700",
-                  fontSize: "42px",
-                }}
-              >
-                <i
-                  className="fa-brands fa-facebook-f"
-                  style={{ fontSize: "25px", marginRight: "10px" }}
-                ></i>
-                <i
-                  className="fa-brands fa-x-twitter"
-                  style={{ fontSize: "25px", marginRight: "10px" }}
-                ></i>
-                <i
-                  className="fa-brands fa-instagram"
-                  style={{ fontSize: "25px", marginRight: "10px" }}
-                ></i>
-                <i
-                  className="fa-brands fa-tiktok"
-                  style={{ fontSize: "25px", marginRight: "10px" }}
-                ></i>
-                <i
-                  className="fa-brands fa-youtube"
-                  style={{ fontSize: "25px", marginRight: "10px" }}
-                ></i>
+              <p>Building C15 | Abu Rawash | Cairo-Alex Rd | Giza | Egypt</p>
+              <h6>
+                <i className="fa-brands fa-facebook-f"></i>
+                <i className="fa-brands fa-x-twitter"></i>
+                <i className="fa-brands fa-instagram"></i>
+                <i className="fa-brands fa-tiktok"></i>
+                <i className="fa-brands fa-youtube"></i>
               </h6>
             </div>
           </Col>

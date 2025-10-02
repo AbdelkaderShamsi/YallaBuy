@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import ImageSlider from "../components/ImageSlider";
@@ -62,7 +62,6 @@ function HomeScreen() {
               <Link
                 to={`/products?category=${encodeURIComponent(cat.name)}`}
                 className="category-item text-center"
-                style={{ textDecoration: "none", color: "inherit" }}
               >
                 <div className="circle">
                   <img src={cat.img} alt={cat.name} />
@@ -72,61 +71,60 @@ function HomeScreen() {
             </div>
           ))}
         </div>
-
-        <div className="section-box green text-center">
-          <h2 className="mb-3">Welcome to YallaBuy</h2>
-          <p style={{ maxWidth: "600px", margin: "0 auto 20px" }}>
+      </Container>
+      <div className="section-box" ref={aboutRef}>
+        <div className="container-fluid my-2">
+          <h2 className="text-center my-3">Welcome to YallaBuy</h2>
+          <p
+            className="text-center mb-5"
+            style={{ maxWidth: "700px", margin: "0 auto" }}
+          >
             Discover amazing deals and shop your favorite products easily and
             quickly.
           </p>
-          <video
-            width="70%"
-            height="auto"
-            controls
-            autoPlay
-            muted
-            playsInline
-            style={{
-              borderRadius: "15px",
-              boxShadow: "0 4px 20px rgba(0,0,0,0.5)",
-            }}
-          >
-            <source src="/media/yallabuy_video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+
+          <div className="row align-items-center">
+            <div className="col-md-6 text-center">
+              <video
+                width="90%"
+                height="auto"
+                controls
+                autoPlay
+                muted
+                playsInline
+                style={{
+                  borderRadius: "15px",
+                  boxShadow: "0 4px 20px rgba(0,0,0,0.5)",
+                }}
+              >
+                <source src="/media/yallabuy_video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <div className="col-md-6">
+              <h1 className="mb-3">About Us</h1>
+              <p style={{ fontSize: "15px", lineHeight: "1.8" }}>
+                Welcome to our online store! We are dedicated to bringing you a
+                wide variety of high-quality products at affordable prices. From
+                the latest mobiles, fashionable clothing, and stylish
+                accessories to home essentials and electronics, our goal is to
+                make your shopping experience simple, enjoyable, and reliable.
+                <br />
+                With a user-friendly platform, secure payment options, and fast
+                delivery, we strive to ensure that every order reaches you with
+                care. Whether you’re looking for the newest trends, upgrading
+                your gadgets, or finding the perfect gift, we’ve got something
+                for everyone.
+                <br />
+                Thank you for choosing us — your satisfaction and trust are at
+                the heart of everything we do.
+              </p>
+            </div>
+          </div>
         </div>
-      </Container>
-      <div className="section-box beige" fluid ref={aboutRef}>
-        <Row className="align-items-center">
-          <Col md={7}>
-            <h1 className="mb-3">About Us</h1>
-            <p style={{ fontSize: "20px", lineHeight: "1.8" }}>
-              Welcome to our online store! We are dedicated to bringing you a
-              wide variety of high-quality products at affordable prices. From
-              the latest mobiles, fashionable clothing, and stylish accessories
-              to home essentials and electronics, our goal is to make your
-              shopping experience simple, enjoyable, and reliable.
-              <br />
-              With a user-friendly platform, secure payment options, and fast
-              delivery, we strive to ensure that every order reaches you with
-              care. Whether you’re looking for the newest trends, upgrading your
-              gadgets, or finding the perfect gift, we’ve got something for
-              everyone.
-              <br />
-              Thank you for choosing us — your satisfaction and trust are at the
-              heart of everything we do.
-            </p>
-          </Col>
-          <Col md={5} className="text-center">
-            <img
-              src="/media/online_shopping.jpg"
-              alt="Online Shopping"
-              className="img-fluid rounded-circle"
-              style={{ border: "5px solid white" }}
-            />
-          </Col>
-        </Row>
       </div>
+
       <Container>
         <div>
           <Reviews />
